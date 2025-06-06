@@ -43,35 +43,45 @@ const Register = () => {
       });
   };
   return (
-    <section className="bg-[#BDCDD6]">
+    <div className="min-h-screen flex flex-col bg-[#BDCDD6]">
       <Navbar />
-      <section className="flex justify-center px-10 py-32">
-        <form className="w-full max-w-sm form-control" onSubmit={handleSubmitRegis}>
-          <h1 className="mb-4 text-4xl font-bold text-center">Let's Register</h1>
+
+      <main className="flex-grow flex justify-center px-10 py-32">
+        <form
+          className="w-full max-w-sm form-control"
+          onSubmit={handleSubmitRegis}
+        >
+          <h1 className="mb-4 text-4xl font-bold text-center">
+            Let's Register
+          </h1>
+
           <label className="label">Name</label>
           <input
             onChange={handleRegister}
             value={register.name}
             type="text"
             name="name"
-            className="w-full border-black input input-bordered rounded-xl"
+            className="w-full border-black input rounded-xl"
           />
+
           <label className="label">Image URL</label>
           <input
             onChange={handleRegister}
             value={register.image_url}
             type="text"
             name="image_url"
-            className="w-full border-black input input-bordered rounded-xl"
+            className="w-full border-black input rounded-xl"
           />
+
           <label className="label">Email</label>
           <input
             onChange={handleRegister}
             value={register.email}
             type="text"
             name="email"
-            className="w-full border-black input input-bordered rounded-xl"
+            className="w-full border-black input rounded-xl"
           />
+
           <label className="label">Password</label>
           <input
             onChange={handleRegister}
@@ -79,15 +89,17 @@ const Register = () => {
             name="password"
             type="password"
             minLength={8}
-            className="w-full border-black input input-bordered rounded-xl"
+            className="w-full border-black input rounded-xl"
           />
+
           <button type="submit" className="mt-10 rounded-lg btn btn-neutral">
             Register
           </button>
         </form>
-      </section>
+      </main>
+
       <Footer />
-    </section>
+    </div>
   );
 };
 
